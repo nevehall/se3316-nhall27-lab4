@@ -14,7 +14,6 @@ export class CoursesComponent implements OnInit {
   
   constructor(coursesService: CoursesService) { 
     this.courses = coursesService.getCourses();
-    //this.courses = coursesService.saveCourse();
   }
   
   CoursesService courseSer = new CoursesService;

@@ -4,11 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 
-var courseArr = ["Course1", "Course2", "Course3"];
+var courseArr = [];
 
 export class CoursesService{
   getCourses() : string[]{
-    return courseArr;//["Course1", "Course2", "Course3"];
+    return courseArr;
   }
   
   saveCourse(courseSave : string){
