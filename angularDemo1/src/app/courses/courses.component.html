@@ -1,8 +1,11 @@
 <h2>{{title}}</h2>
-<input type = "text" appAutoGrow />
+<input type = "text" id = "courseInput"/>
+<button (click) = saveCourse()>Add Course</button>
+
 <p>
   courses works!
 </p>
 <ul>
     <li *ngFor="let course of courses" >{{course}}</li>
+    
 </ul>

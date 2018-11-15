@@ -11,11 +11,19 @@ import { AutoGrowDirective } from '../auto-grow.directive';
 export class CoursesComponent implements OnInit {
   title = "Courses";
   courses;
-
+  
   constructor(coursesService: CoursesService) { 
     this.courses = coursesService.getCourses();
-    this.courses = coursesService.saveCourse();
+    //this.courses = coursesService.saveCourse();
   }
+  
+  CoursesService courseSer = new CoursesService;
+  
+  saveCourse(){
+   this.courseSer.saveCourse(document.getElementById("courseInput").value);
+  }
+
+  
   ngOnInit() {
   }
   
