@@ -1,4 +1,22 @@
-import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { ModuleWithProviders } from '@angular/core/src/metadata/ng_module';
+
+ 
+import { LoginComponent } from './login/login.component';
+ 
+export const AppRoutes: Routes = [
+    { path: '', component: LoginComponent }
+];
+ 
+export const ROUTING: ModuleWithProviders = RouterModule.forRoot(AppRoutes);
+
+
+
+
+
+
+//original stuff in this file
+/*import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core/src/metadata/ng_module';
 import { LoginComponent } from './login/login.component';
@@ -15,4 +33,4 @@ export const ROUTING: ModuleWithProviders = RouterModule.forRoot(AppRoutes);
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { }*/
