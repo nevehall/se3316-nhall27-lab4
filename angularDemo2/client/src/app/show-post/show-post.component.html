@@ -1,26 +1,10 @@
 <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Blog post 1</h5>
-      <small>3 days ago</small>
-    </div>
-    <p class="mb-1">Sup</p>
-    <small>Small sup</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Blog post 2</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">Sup 2</p>
-    <small class="text-muted">small sup 2</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Blog post 3</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">Sup 3</p>
-    <small class="text-muted">small sup 3</small>
-  </a>
+        <a *ngFor="let post of posts" href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{post.title}}</h5>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">{{post.description}}</p>
+            <small>read more...</small>
+        </a>
 </div>
