@@ -36,7 +36,7 @@ app.post('/api/post/getAllPost', (req, res) => {
     mongoose.connect(url, function(err){
         if(err) throw err;
         console.log('connection established successfully');
-	    Post.find({},[],{ sort: { _id: -1 } },(err, doc) => {
+	    Post.find({},[],{ sort: { _id: 1 } },(err, doc) => {
 	    		console.log("finding posts")
 				if(err) throw err;
 				return res.status(200).json({

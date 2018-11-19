@@ -22,7 +22,7 @@ export class AddPostComponent {
   	if(this.post.title && this.post.description){
   		this.addPostService.addPost(this.post).subscribe(res =>{
   		    console.log('response is', res)
-  			this.closeBtn.nativeElement.click();
+  			//this.closeBtn.nativeElement.click();
             this.commonService.notifyPostAddition();
   		});
   	} else {
